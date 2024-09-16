@@ -25,10 +25,12 @@ const Conversiones = () => {
         <p>Error: {error}</p>
       ) : dolar.length > 0 ? (
         dolar.map((item, indice) => (
-          <div key={indice} className='flex'>
-            <p className='text'>{item.casa}</p>
-            <p>{item.compra}</p>
-            <p>{item.venta}</p>
+          <div key={indice} className='flex items-center justify-center '>
+            <p className='text'> dolar {item.casa}</p>
+            <div className='col'>
+            <p>COMPRA{item.compra}</p>
+            <p>VENTA{item.venta}</p>
+            </div>
           </div>
         ))
       ) : (
